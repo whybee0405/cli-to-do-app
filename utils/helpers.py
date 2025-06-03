@@ -1,4 +1,8 @@
 import json
+import hashlib
+
+def hash_password(password):
+    return hashlib.sha256(password.encode()).hexdigest()
 
 def load_json(path):
     with open(path,"r") as f:
